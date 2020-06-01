@@ -10,5 +10,6 @@ The functionality implemented is as follows:
 - dropdown user_id selector that is auto-populated with ids from the json file
 - window to display demographic information pertaining to the selected id
 - bar chart that filters the top 10 bacteria present for the selected id
-- bubble chart that pictorially shows the relative prevalance of sspecific bacteria strains for the selected id.
+- bubble chart that pictorially shows the relative prevalance of sspecific bacteria strains for the selected id  
+- gauge that shows the selectd id's wash frequency.
 
