@@ -122,18 +122,31 @@ function buildCharts(sample) {
 //end bubble
 
 //gauge
-var data3 = [
-	{
-		domain: { x: [0, 1], y: [0, 1] },
-		
-		title: { text: "WFREQ" },
-		type: "indicator",
-		mode: "gauge+number"
-	}
-];
 
-var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
-Plotly.newPlot('myDiv', data, layout);
+  d3.json("samples.json").then((data2) => {
+    var metadata2 = data2.metadata;
+    var resultArray2 = metadata2.filter(sampleObj2 => sampleObj2.id == sample);
+    var result2 = resultArray2[0];
+  //var PANEL = d3.select("#sample-metadata");
+
+    var wfreqValue=result2.wfreq;
+  
+    console.log(wfreqValue);
+
+    var data3 = [
+      {
+        domain: { x: [0, 9], y: [0, 9] },
+        value: wfreqValue,
+        title: { text: "WFREQ" },
+        type: "indicator",
+        mode: "gauge+number"
+      }
+    ];
+
+    var layout3 = { width: 600, height: 500, margin: { t: 0, b: 0 } };
+    Plotly.newPlot('gauge', data3, layout3);
+  });
+
 //end gauge
 
 
