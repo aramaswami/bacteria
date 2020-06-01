@@ -55,13 +55,13 @@ function init() {
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
-      PANEL.append("h6").text(result.id);
-      PANEL.append("h6").text(result.ethnicity);
-      PANEL.append("h6").text(result.gender);
-      PANEL.append("h6").text(result.age);
-      PANEL.append("h6").text(result.location);
-      PANEL.append("h6").text(result.bbtype);
-      PANEL.append("h6").text(result.wfreq);
+      PANEL.append("h6").text("ID: "+ result.id);
+      PANEL.append("h6").text("Ethnicity: "+ result.ethnicity);
+      PANEL.append("h6").text("Gender: "+result.gender);
+      PANEL.append("h6").text("Age: "+result.age);
+      PANEL.append("h6").text("Location: "+result.location);
+      PANEL.append("h6").text("BBtype: "+result.bbtype);
+      PANEL.append("h6").text("WFREQ: "+result.wfreq);
     });
   }
 
