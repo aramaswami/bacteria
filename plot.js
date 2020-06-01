@@ -42,6 +42,22 @@ function init() {
   
   init();
 
+//chart on load start
+ 
+d3.json("samples.json").then((data3) => {
+  var metadata3 = data3.metadata;
+  var resultArray3 = metadata3.slice(0,1);
+  var result3 = resultArray3[0];
+  var id_one=result3.id;
+  console.log(resultArray3);
+  console.log(id_one);
+  buildMetadata(id_one);
+  buildCharts(id_one);
+});
+
+//chart on load end
+
+
   function optionChanged(newSample) {
     buildMetadata(newSample);
     buildCharts(newSample);
